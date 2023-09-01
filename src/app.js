@@ -2,12 +2,18 @@
 const express = require("express");
 require("dotenv").config();
 const databaseConnection = require("./configs/database/database.config");
+const patientRoute = require("./routes/patient/patient.route");
 
 // app
 const app = express();
 
 // database connection
 databaseConnection(process.env.URI);
+
+// use
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use("/patient", patientRoute);
 
 // route
 app.get("/", (req, res) => {
