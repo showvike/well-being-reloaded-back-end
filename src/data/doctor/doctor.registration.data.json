@@ -10,5 +10,10 @@
   "dateOfBirth": "String",
   "bloodGroup": "String",
   "gender": "String",
-  "profilePictureUrl": "String"
+  "profilePictureUrl": "String",
+  "district": "String",
+  "thana": "String",
+  "area": "String",
+  "buildingNo": "String",
+  "password": "String"
 }

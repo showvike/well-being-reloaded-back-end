@@ -3,7 +3,7 @@ const doctorModel = require("../../models/doctor/doctor.model");
 
 // doctor registration controller
 const doctorRegistrationController = async (req, res) => {
-  console.log("hit: /doctor/registration");
+  console.log("hit: /doctor/registration POST");
 
   const doctorDetails = ({
     firstName,
@@ -18,6 +18,11 @@ const doctorRegistrationController = async (req, res) => {
     bloodGroup,
     gender,
     profilePictureUrl,
+    district,
+    thana,
+    area,
+    buildingNo,
+    password,
   } = req.body);
 
   try {
@@ -37,7 +42,7 @@ const doctorRegistrationController = async (req, res) => {
     return res.status(500).json({
       status: "error",
       body: {
-        message: "doctor registration error",
+        message: `doctor registration error: ${err}`,
       },
     });
   }
