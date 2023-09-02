@@ -1,24 +1,21 @@
 // require
 const mongoose = require("mongoose");
 
-// patient registration schema
-const patientRegistrationSchema = new mongoose.Schema({
+// doctor schema
+const doctorSchema = new mongoose.Schema({
   firstName: String,
   lastName: String,
   email: String,
   mobileNumber: String,
+  specialty: String,
+  designation: String,
   nationalId: String,
-  birthCertificateNo: String,
+  bmaNumber: String,
   dateOfBirth: String,
   bloodGroup: String,
   gender: String,
   profilePictureUrl: String,
-  district: String,
-  thana: String,
-  area: String,
-  buildingNo: String,
-  password: String,
 });
 
 // export
-module.exports = patientRegistrationSchema;
+module.exports = doctorSchema;

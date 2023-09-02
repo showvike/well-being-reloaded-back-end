@@ -1,5 +1,5 @@
 // require
-const patientRegistrationModel = require("../../models/patient/patient.registration.model");
+const patientModel = require("../../models/patient/patient.model");
 
 // patient registration controller
 const patientRegistrationController = async (req, res) => {
@@ -24,7 +24,7 @@ const patientRegistrationController = async (req, res) => {
   } = req.body);
 
   try {
-    await patientRegistrationModel.create(patientDetails);
+    await patientModel.create(patientDetails);
 
     console.log("patient registration successful");
 

@@ -3,6 +3,7 @@ const express = require("express");
 require("dotenv").config();
 const databaseConnection = require("./configs/database/database.config");
 const patientRoute = require("./routes/patient/patient.route");
+const doctorRoute = require("./routes/doctor/doctor.route");
 
 // app
 const app = express();
@@ -14,6 +15,7 @@ databaseConnection(process.env.URI);
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/patient", patientRoute);
+app.use("/doctor", doctorRoute);
 
 // route
 app.get("/", (req, res) => {
