@@ -1,0 +1,14 @@
+{
+  "firstName": "String",
+  "lastName": "String",
+  "email": "String",
+  "mobileNumber": "String",
+  "specialty": "String",
+  "designation": "String",
+  "nationalId": "String",
+  "bmaNumber": "String",
+  "dateOfBirth": "String",
+  "bloodGroup": "String",
+  "gender": "String",
+  "profilePictureUrl": "String"
+}
