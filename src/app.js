@@ -4,6 +4,7 @@ require("dotenv").config();
 const databaseConnection = require("./configs/database/database.config");
 const patientRoute = require("./routes/patient/patient.route");
 const doctorRoute = require("./routes/doctor/doctor.route");
+const adminRoute = require("./routes/admin/admin.route");
 
 // app
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use("/patient", patientRoute);
 app.use("/doctor", doctorRoute);
+app.use("/admin", adminRoute);
 
 // route
 app.get("/", (req, res) => {

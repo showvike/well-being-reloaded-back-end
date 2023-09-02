@@ -15,6 +15,11 @@ const doctorSchema = new mongoose.Schema({
   bloodGroup: String,
   gender: String,
   profilePictureUrl: String,
+  district: String,
+  thana: String,
+  area: String,
+  buildingNo: String,
+  password: String,
 });
 
 // export
