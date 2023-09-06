@@ -24,6 +24,7 @@ const patientLoginController = async (req, res) => {
       status: "ok",
       body: {
         message: "patient login successful",
+        data: patient,
       },
     });
   } catch (err) {
